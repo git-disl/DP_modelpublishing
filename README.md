@@ -4,7 +4,7 @@ The example code for the paper ["Differentially Private Model Publishing for Dee
 
 Some notes:
 * The code was based on the original DP-SGD implementation in CCS'16  which was not maitained anymore. It requires Tensorflow 0.10.0. A fork canbe found [here](https://github.com/eric-erki/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials/tree/8fcc9a6c9a864834d5941c10b145c0a58ee3d4af/tensorflow_dl_models/research/differential_privacy/dp_sgd)
-
+* In the training code DumpzCDPAccountant is used and the real accounting is done during the training step. zCDPAccountant implementation is in privacy\_accountant/accountant.py but not used yet. 
 
 Directory:
 1. The examples with decay functions are in dp\_mnist and dp\_cancerdataset

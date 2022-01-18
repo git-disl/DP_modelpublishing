@@ -268,7 +268,7 @@ def Train(train_file, test_file, validation_file, network_parameters, num_steps,
           NUM_TRAINING_IMAGES)
       sigma = FLAGS.sigma
     elif FLAGS.accountant_type == "ZDCP":
-        priv_accountant = accountant.zCDPAccountant
+        priv_accountant = accountant.DumpzCDPAccountant()
     else:
       raise ValueError("Undefined accountant type, needs to be "
                        "Amortized or Moments, but got %s" % FLAGS.accountant)

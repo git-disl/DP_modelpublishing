@@ -302,7 +302,7 @@ def Train(mnist_train_file, mnist_test_file, mnist_validation_file, network_para
       pca_sigma = FLAGS.pca_sigma
       with_privacy = FLAGS.sigma > 0
     elif FLAGS.accountant_type == "ZCDP":
-        priv_accountant = accountant.zCDPAccountant
+        priv_accountant = accountant.DumpzCDPAccountant()
     else:
       raise ValueError("Undefined accountant type, needs to be "
                        "Amortized or Moments, but got %s" % FLAGS.accountant)
